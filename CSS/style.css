@@ -8,10 +8,10 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Mingzat', sans-serif;
 }
 
 li, a, button {
-    font-family: 'Mingzat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     text-decoration: none;
@@ -111,4 +111,76 @@ h1 {
 
 p {
   font-size:larger;
+}
+
+.workout-container {
+  display: inline-block;
+  background-color: white;
+}
+
+.card-text {
+  color: #FFFDD0;
+  padding-bottom: 8px;
+}
+
+/* Three columns side by side */
+.card-column {
+  background-color: #FCACBF;
+  float: left;
+  width: 25%;
+  margin: 4.3em;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding: 8px 8px;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.card-image {
+  padding-bottom: 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .card-column {
+    width: 100%;
+    display: block;
+  }
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+/* Some left and right padding inside the container */
+.card-text-container {
+  padding: 0 16px;
+}
+
+/* Clear floats */
+.card-text-container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.card-title {
+  color: grey;
+}
+
+.card-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.card-button:hover {
+  background-color: #555;
+}
 }
