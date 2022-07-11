@@ -13,7 +13,7 @@ html, body {
 
 li, a, button {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 20px;
     text-decoration: none;
     color: #FFFDD0
   }
@@ -35,7 +35,7 @@ header {
 }
   
 .logo:hover {
-    color: aqua;
+    color: rgba(205, 58, 255, 1);
   }
   
 .nav-links {
@@ -52,7 +52,7 @@ header {
   }
   
 .nav-links li a:hover {
-    color: aqua;
+    color: rgba(205, 58, 255, 1);
   }
   
 button {
@@ -66,7 +66,29 @@ button {
   
 button:hover {
     background-color: rgba(205, 58, 255, 0.7);
+    cursor: pointer;
   }
+
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/V2ZSR3N/pexels-victor-freitas-703014.jpg");
+    height: 50%;
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFFDD0;
+  }
+
 
 h1, p {
     font-family: 'Mingzat', sans-serif;
@@ -75,34 +97,39 @@ h1, p {
 .hometext-container {
     height: 600px;
     width: 100%;
-    background-color: #CBC3E3;
 }
 
 .hometext {
     position: relative;
     text-align: center;
-    color: #FFFDD0;
-    height: 100vh;
+    color: white;
 }
 
 .p-link {
   text-decoration-line: underline;
 }
 
-.homeimage-1 {
+/*.homeimage-1 {
     position: absolute;
     right: 100px;
     width: 400px;
-    height: 600px;
+    height: 578px;
+    margin-top: 25px;
     object-fit:cover;
     object-position: 50% 100%;
-}
+}*/
 
 .home-article {
-    position: absolute;
-    left: 10px;
-    width: 50%;
-    padding: 100px;
+    position: relative;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    padding: 185px 200px;
+    background-color: #CBC3E3;
+}
+
+.home-article a {
+  color: white;
 }
 
 h1 {
@@ -119,9 +146,22 @@ p {
 }
 
 .card-text {
-  color: #FFFDD0;
+  color: white;
   padding-bottom: 8px;
 }
+
+.card-lists ul li {
+  list-style-position: inside;
+  font-size: large;
+  list-style-type: none;
+}
+
+.card-lists ul li:before { 
+  content: '💪';
+  margin-left: -20px; 
+  margin-right: 10px;
+}
+
 
 /* Three columns side by side */
 .card-column {
@@ -129,7 +169,7 @@ p {
   float: left;
   width: 25%;
   margin: 4.3em;
-  margin-bottom: 16px;
+  margin-bottom: 80px;
   margin-top: 16px;
   padding: 8px 8px;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
@@ -164,10 +204,7 @@ p {
   display: table;
 }
 
-.card-title {
-  color: grey;
-}
-
+/*
 .card-button {
   border: none;
   outline: 0;
@@ -183,4 +220,6 @@ p {
 .card-button:hover {
   background-color: #555;
 }
+}
+*/
 }
