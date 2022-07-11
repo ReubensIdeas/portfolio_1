@@ -1,0 +1,114 @@
+html, body {
+    height: 100%;
+    width: 100%;
+  }
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
+  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li, a, button {
+    font-family: 'Mingzat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: none;
+    color: #FFFDD0
+  }
+  
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 30px 10%;
+    background-color: #FCACBF;
+  }
+  
+.logo {
+    margin-right: auto;
+  }
+
+.logo-h1 {
+  text-decoration-line:overline;
+}
+  
+.logo:hover {
+    color: aqua;
+  }
+  
+.nav-links {
+    list-style: none;
+  }
+  
+.nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+.nav-links li a {
+    transition: all 0.2s ease 0s;
+  }
+  
+.nav-links li a:hover {
+    color: aqua;
+  }
+  
+button {
+    padding: 9px 25px;
+    background-color: rgba(205, 58, 255, 1);
+    border: none;
+    border-radius: 50px;
+    transition: all 0.2s ease 0s;
+    margin-left: 20px;
+  }
+  
+button:hover {
+    background-color: rgba(205, 58, 255, 0.7);
+  }
+
+h1, p {
+    font-family: 'Mingzat', sans-serif;
+}
+
+.hometext-container {
+    height: 600px;
+    width: 100%;
+    background-color: #CBC3E3;
+}
+
+.hometext {
+    position: relative;
+    text-align: center;
+    color: #FFFDD0;
+    height: 100vh;
+}
+
+.p-link {
+  text-decoration-line: underline;
+}
+
+.homeimage-1 {
+    position: absolute;
+    right: 100px;
+    width: 400px;
+    height: 600px;
+    object-fit:cover;
+    object-position: 50% 100%;
+}
+
+.home-article {
+    position: absolute;
+    left: 10px;
+    width: 50%;
+    padding: 100px;
+}
+
+h1 {
+  font-size:xx-large;
+}
+
+p {
+  font-size:larger;
+}
