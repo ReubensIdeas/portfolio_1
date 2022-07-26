@@ -129,7 +129,7 @@ h1, p {
 }
 
 .hometext-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/kemedWB.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/Je3Nsbs.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -140,6 +140,12 @@ h1, p {
   border-top: thick solid whitesmoke;
 }
 
+.hometext {
+  position:relative;
+  width:inherit;
+  height:inherit;
+  margin:auto;
+}
 
 .p-link {
   text-decoration-line: underline;
@@ -150,17 +156,21 @@ h1, p {
   color: #3A3B3C;
   background-color: #CBC3E3;
   font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
-  bottom: 20%;
-  left: 20%;
   width: 60%;
+  top:20%;
+  left:20%;
   border-radius: 25px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   padding: 10vh 2.5vw;
   text-align: center;
-  max-width: 100%;
-  max-height: 60%;
-  min-height: 200px;
 } 
+
+@media screen and (max-width:800px){
+  .home-article {
+   width:80%;
+   left:10%;
+  }
+}
 
 article ul li {
   list-style-position: inside;
@@ -183,20 +193,18 @@ article a strong {
 }
 
 article h1 {
-  font-size: 48px;
+  font-size: xx-large;
   text-decoration: overline;
 }
 
 article p {
-  font-size: 24px;
+  font-size: larger;
 }
 
 .workout-container {
 position: relative;
-background-color: whitesmoke;
-height: 900px;
+background-color:#FCACBF;
 max-width: 100%;
-/*max-height: 100%;*/
 border: thick dotted #FCACBF;
 border-top: hidden;
 border-bottom: hidden;
@@ -218,28 +226,25 @@ border-bottom: hidden;
   color: #3A3B3C;
 }
 
+/* Adding emojis to my bullet points */
 .card-lists ul li:before { 
   content: '💪';
   margin-left: -20px; 
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 650px) {
+/* Scrollable collumns for mobile */
+@media screen and (max-width: 800px) {
   .card-column {
-    background-color: #CBC3E3;
-    position: relative;
+    width: 100%;
     display: block;
-    max-width:90%;
-    min-width:90%;
-    margin: 5%;
-    max-height: 900px;
-    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
-    text-align: center;
+    margin-bottom: 20px;
   }
 }
 
+
 /* Three columns side by side */
-@media only screen and (min-width: 651px) {
+@media only screen and (min-width: 801px) {
 .card-column {
   background-color: #CBC3E3;
   position: relative;
@@ -283,26 +288,42 @@ border-bottom: hidden;
   bottom: 5%;
 }
 
-#workout-plan {
+@media screen and (min-width:801px) {
+  #workout-plan {
   position: relative;
   background-image:url("https://i.imgur.com/vHNvPoy.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   max-width: 100%;
-  max-height: 100%;
   height: 1100px;
+  border-top: medium solid whitesmoke;
+}
 }
 
+@media screen and (max-width:800px) {
+  #workout-plan {
+    position: relative;
+    background-image:url("https://i.imgur.com/vHNvPoy.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    height: 1100px;
+    border-top: medium solid whitesmoke;
+  }
+}
+
+@media screen and (min-width:800px){
 .plan-text {
   position: absolute;
   background-color: #CBC3E3;
   text-align: center;
-  max-width:30%;
-  max-height: 80%;
   top: 30%;
-  left: 60%;
+  right:15%;
+  width:30%;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
+}
 }
 
 .plan-text ul li {
@@ -324,25 +345,51 @@ border-bottom: hidden;
   padding: 10px 10px;
 }
 
+@media screen and (min-width:800px){
 #workout-plan img {
   position:absolute;
   display:block;
-  top: 2.5%;
-  left: 8%;
-  max-height:95%;
+  max-height:80%;
   max-width:50%;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
+  margin-top: 5%;
+  margin-left: 10%;
+}
+}
+
+@media screen and (max-width:800px) {
+  #workout-plan img {
+    width: 95%;
+    min-width:95%;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width:800px) {
+  .plan-text {
+   background-color: #CBC3E3;
+   text-align:center;
+   margin-top:5%;
+   width: 80%;
+   min-width: 80%;
+   display:block;
+   margin-left:auto;
+   margin-right:auto;
+   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
+  }
 }
 
 .about-container {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/V9P42d1/On-Paste-20220719-212316.png");
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/1Gykf72.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
 position: relative;
-height: 1100px;
+height: 900px;
 max-width: 100%;
-max-height: 100%;
 border-top: thick solid whitesmoke;
 }
 
@@ -351,15 +398,21 @@ border-top: thick solid whitesmoke;
   color: #3A3B3C;
   background-color:#CBC3E3;
   border-radius: 25px; 
-  width: 50%;
+  width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   padding: 10vh 2.5vw;
-  z-index:2;
-  top:25%;
-  left:25%;
+  top:20%;
+  left:20%;
   text-align: center;
   max-width: 100%;
   min-height: 40%;
+}
+
+@media screen and (max-width:800px){
+  .about-container > article {
+   width:80%;
+   left:10%;
+  }
 }
 
 article > h1 {
@@ -368,24 +421,39 @@ article > h1 {
 
 .contact-form {
 position: relative;
-background-color: whitesmoke;
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/br8ALCZ.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 height: 900px;
 max-width: 100%;
-border: thick dotted #FCACBF;
+border-top: medium solid whitesmoke;
 }
 
 
+@media screen and (min-width:801px){
 fieldset {
   position: absolute;
   background-color:#CBC3E3;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   border-radius: 25px;
   width: 40%;
-  top: 30%;
-  left:30%;
+  left: 30%;
+  top: 25%;
   padding: 2.5vh 2.5vw;
-  max-width: 40%;
-  min-height: 40%;
+}
+}
+
+@media screen and (max-width:800px){
+  fieldset {
+    position:absolute;
+    background-color: #CBC3E3;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+    border-radius: 25px;
+    width:90%;
+    left:5%;
+    top:30%;
+  }
 }
 
 legend {
@@ -416,21 +484,36 @@ footer {
 }
 
 .footer-row {
+  display:list-item;
+}
+
+@media screen and (min-width:801px) {
+.footer-row {
   display:flex;
   flex-wrap:wrap;
   padding: 2.5% 0;
 }
+}
 
+@media screen and (min-width:800px){
 .footer-box {
 flex:0 0 auto;
 margin: 0 1%;
 max-width:20%;
 }
+}
 
-.footer-image {
-  padding-left:2.5%;
-  max-width:20%;
-  max-height:30%;
+@media screen and (max-width:800px) {
+  .footer-box {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width:800px) {
+  .footer-box2 {
+    position:relative;
+    margin: 5% 5%;
+  }
 }
 
 .footer-box2 {
@@ -465,6 +548,7 @@ iframe {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
 }
 
+
 .quote {
   margin-top: auto;
   margin-bottom: auto;
@@ -472,6 +556,15 @@ iframe {
   padding: 1% 1%;
   text-align: center;
 }
+
+
+@media screen and (max-width:800px) {
+.quote {
+  top: 5%;
+  max-width: 90%;
+  border-top:thick solid #FCACBF;
+}
+} 
 
 .quote h2 {
   color:whitesmoke;
