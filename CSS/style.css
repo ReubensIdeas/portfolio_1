@@ -1,61 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
+}
+
 html, body {
     height: 100%;
-    width: 100%;
+    max-width: 100vw;
   }
-@import url('https://fonts.googleapis.com/css2?family=Mingzat&display=swap');
   
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Mingzat', sans-serif;
-}
 
 li, a, button {
     font-weight: 400;
     font-size: 20px;
     text-decoration: none;
-    color: #FFFDD0
+    color: white;
   }
   
 header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 30px 10%;
-    background-color: #FCACBF;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 2;
+  display: inline-block;
+  width:100%;
+  padding: 10px 2.5%;
+  background-color: #FCACBF;
   }
   
+  @media screen and (max-width: 650px) {
+    header {
+      max-width:100%
+    }
+  }
+
+@media screen and (max-width: 650px) {
+  .navbar {
+    max-width:100%
+  }
+}
+
 .logo {
     margin-right: auto;
   }
 
 .logo-h1 {
   text-decoration-line:overline;
+  z-index:3;
 }
   
 .logo:hover {
-    color: rgba(205, 58, 255, 1);
+  color: rgba(205, 58, 255, 1);
   }
   
 .nav-links {
-    list-style: none;
+  position:absolute;
+  list-style: none;
+  padding: 0px 35px;
+  right: 10%;
+  top: 17px;
+
   }
   
 .nav-links li {
-    display: inline-block;
-    padding: 0px 20px;
+  display: inline-block;
+  padding: 0px 25px;
   }
   
 .nav-links li a {
+    font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
     transition: all 0.2s ease 0s;
+    font-size: 1.2em;
   }
   
 .nav-links li a:hover {
     color: rgba(205, 58, 255, 1);
   }
+
+.cta {
+    position: absolute;
+    top: 15px;
+    right:2%;
+}
   
-button {
+button { 
+    font-family: sans-serif, 'Mingzat', 'Edu SA Beginner';
     padding: 9px 25px;
     background-color: rgba(205, 58, 255, 1);
     border: none;
@@ -70,14 +104,14 @@ button:hover {
   }
 
   .hero-image {
-    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/V2ZSR3N/pexels-victor-freitas-703014.jpg");
-    height: 50%;
-    /* Position and center the image to scale nicely on all screens */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/phJkBN5.jpg");
+    height: 70%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    max-width: 100%;
+    max-height: 100%;
   }
   
   .hero-text {
@@ -86,74 +120,102 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #FFFDD0;
+    color: white;
   }
 
 
 h1, p {
-    font-family: 'Mingzat', sans-serif;
+  font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
 }
 
 .hometext-container {
-    height: 600px;
-    width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/kemedWB.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-top: thick solid whitesmoke;
 }
 
-.hometext {
-    position: relative;
-    text-align: center;
-    color: white;
-}
 
 .p-link {
   text-decoration-line: underline;
 }
 
-/*.homeimage-1 {
-    position: absolute;
-    right: 100px;
-    width: 400px;
-    height: 578px;
-    margin-top: 25px;
-    object-fit:cover;
-    object-position: 50% 100%;
-}*/
-
 .home-article {
-    position: relative;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-top: 10px;
-    padding: 185px 200px;
-    background-color: #CBC3E3;
+  position:absolute;
+  color: #3A3B3C;
+  background-color: #CBC3E3;
+  font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
+  bottom: 20%;
+  left: 20%;
+  width: 60%;
+  border-radius: 25px; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  padding: 10vh 2.5vw;
+  text-align: center;
+  max-width: 100%;
+  max-height: 60%;
+  min-height: 200px;
+} 
+
+article ul li {
+  list-style-position: inside;
+  font-size:x-large;
+  color: #3A3B3C;
+}
+
+article h1 p {
+  word-wrap: break-word;
+}
+
+article a strong {
+  font-size: x-large;
+  text-decoration: underline;
+  color: #3A3B3C;
 }
 
 .home-article a {
-  color: white;
+  color: darkslategrey;
 }
 
-h1 {
-  font-size:xx-large;
+article h1 {
+  font-size: 48px;
+  text-decoration: overline;
 }
 
-p {
-  font-size:larger;
+article p {
+  font-size: 24px;
 }
 
 .workout-container {
-  display: inline-block;
-  background-color: white;
+position: relative;
+background-color: whitesmoke;
+height: 900px;
+max-width: 100%;
+/*max-height: 100%;*/
+border: thick dotted #FCACBF;
+border-top: hidden;
+border-bottom: hidden;
 }
 
 .card-text {
-  color: white;
-  padding-bottom: 8px;
+  color: #3A3B3C;
+  padding-bottom: 16px;
+}
+
+.card-text > h1 {
+  color:#3A3B3C;
 }
 
 .card-lists ul li {
   list-style-position: inside;
-  font-size: large;
+  font-size:x-large;
   list-style-type: none;
+  color: #3A3B3C;
 }
 
 .card-lists ul li:before { 
@@ -162,18 +224,33 @@ p {
   margin-right: 10px;
 }
 
+@media only screen and (max-width: 650px) {
+  .card-column {
+    background-color: #CBC3E3;
+    position: relative;
+    display: block;
+    max-width:90%;
+    min-width:90%;
+    margin: 5%;
+    max-height: 900px;
+    box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+  }
+}
 
 /* Three columns side by side */
+@media only screen and (min-width: 651px) {
 .card-column {
-  background-color: #FCACBF;
-  float: left;
-  width: 25%;
-  margin: 4.3em;
-  margin-bottom: 80px;
-  margin-top: 16px;
-  padding: 8px 8px;
+  background-color: #CBC3E3;
+  position: relative;
+  display: inline-block;
+  left: 3%;
+  margin: 85px 50px 50px 50px;
+  max-width: 25%;
+  max-height: 25%;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
   text-align: center;
+ }
 }
 
 .card-image {
@@ -181,20 +258,21 @@ p {
 }
 
 /* Display the columns below each other instead of side by side on small screens */
-@media screen and (max-width: 650px) {
+/*@media screen and (max-width: 650px) {
   .card-column {
-    width: 100%;
+    max-width: 100%;
     display: block;
-  }
+  } */
 
 /* Add some shadows to create a card effect */
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.7);
 }
 
 /* Some left and right padding inside the container */
 .card-text-container {
   padding: 0 16px;
+  font-size:x-large;
 }
 
 /* Clear floats */
@@ -202,24 +280,224 @@ p {
   content: "";
   clear: both;
   display: table;
+  bottom: 5%;
 }
 
-/*
-.card-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
+#workout-plan {
+  position: relative;
+  background-image:url("https://i.imgur.com/vHNvPoy.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  max-height: 100%;
+  height: 1100px;
+}
+
+.plan-text {
+  position: absolute;
+  background-color: #CBC3E3;
   text-align: center;
-  cursor: pointer;
-  width: 100%;
+  max-width:30%;
+  max-height: 80%;
+  top: 30%;
+  left: 60%;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
 }
 
-.card-button:hover {
-  background-color: #555;
+.plan-text ul li {
+  list-style-position: inside;
+  font-size:x-large;
+  color: #3A3B3C;
+  padding: 10px 10px;
 }
+
+.plan-text p {
+  font-size: x-large;
+  color:#3A3B3C;
 }
-*/
+
+.plan-h1 {
+  color: white;
+  font-size: 48px;
+  text-decoration: overline;
+  padding: 10px 10px;
+}
+
+#workout-plan img {
+  position:absolute;
+  display:block;
+  top: 2.5%;
+  left: 8%;
+  max-height:95%;
+  max-width:50%;
+  box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.5);
+}
+
+.about-container {
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.ibb.co/V9P42d1/On-Paste-20220719-212316.png");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+height: 1100px;
+max-width: 100%;
+max-height: 100%;
+border-top: thick solid whitesmoke;
+}
+
+.about-container > article {
+  position:absolute;
+  color: #3A3B3C;
+  background-color:#CBC3E3;
+  border-radius: 25px; 
+  width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  padding: 10vh 2.5vw;
+  z-index:2;
+  top:25%;
+  left:25%;
+  text-align: center;
+  max-width: 100%;
+  min-height: 40%;
+}
+
+article > h1 {
+  color: white;
+}
+
+.contact-form {
+position: relative;
+background-color: whitesmoke;
+height: 900px;
+max-width: 100%;
+border: thick dotted #FCACBF;
+}
+
+
+fieldset {
+  position: absolute;
+  background-color:#CBC3E3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  border-radius: 25px;
+  width: 40%;
+  top: 30%;
+  left:30%;
+  padding: 2.5vh 2.5vw;
+  max-width: 40%;
+  min-height: 40%;
+}
+
+legend {
+  font-size: 1.6em;
+  color: darkslategrey;
+}
+
+.contact-submit {
+  position:relative;
+  padding: 8px 30px;
+  left: 42%;
+  background-color: rgba(205, 58, 255, 1);
+  border: none;
+  border-radius: 50px;
+  transition: all 0.2s ease 0s;
+  font-size: 1.2em;
+}
+
+.contact-submit:hover {
+  background-color: rgba(205, 58, 255, 0.7);
+  cursor: pointer;
+}
+
+footer {
+  position: relative;
+  background-color:#FCACBF;
+  max-width: 100%;
+}
+
+.footer-row {
+  display:flex;
+  flex-wrap:wrap;
+  padding: 2.5% 0;
+}
+
+.footer-box {
+flex:0 0 auto;
+margin: 0 1%;
+max-width:20%;
+}
+
+.footer-image {
+  padding-left:2.5%;
+  max-width:20%;
+  max-height:30%;
+}
+
+.footer-box2 {
+  margin-top: 1%;
+}
+
+.footer-box2 > h2 {
+  font-size: xx-large;
+  color:whitesmoke;
+}
+
+.footer-box2 > p {
+  font-size: large;
+  color:#3A3B3C;
+  font-weight: 700;
+}
+
+.footer-box2 p a {
+  color:#3A3B3C;
+  font-weight: 700;
+}
+
+.footer-box2 p a i {
+  color: whitesmoke;
+}
+
+table th i {
+  font-weight: 500;
+}
+
+iframe {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+
+.quote {
+  margin-top: auto;
+  margin-bottom: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  padding: 1% 1%;
+  text-align: center;
+}
+
+.quote h2 {
+  color:whitesmoke;
+  font-size: xx-large;
+  font-weight: 900;
+  text-decoration: overline;
+}
+
+.quote p {
+  color:#3A3B3C;
+  font-weight: 700;
+  font-size:large;
+}
+
+th {
+  font-size: xx-large;
+  color: whitesmoke;
+}
+
+td {
+  font-size: large;
+  color:#3A3B3C;
+  font-weight: 700;
+}
+
+.copyright {
+  text-align: center;
+  padding: 1% 0;
 }

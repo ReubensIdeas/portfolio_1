@@ -4,12 +4,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fitness Formula</title>
   <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/f62fe81cd0.js" crossorigin="anonymous"></script>
 </head>
+
 
 <body>
     <header>
+      <div class="navbar">
         <a class="logo" href="index.html"><h1 class="logo-h1">FITNESS FORMULA</h1></a>
          <nav>
            <ul class="nav-links">
@@ -19,6 +23,7 @@
            </ul>
          </nav>
          <a class="cta" href="#contact"><button>Contact</button></a>
+      </div>
     </header>
 
     <div class="hero-image">
@@ -32,19 +37,17 @@
     <div id="home" class="hometext-container">
     <div class="hometext">
     <article class="home-article">
-        <h1>What do we offer?</h1>
-        <br>
+        <h1>What do we offer?</h1><br>
         <p>Here at Fitness Formula we offer workout plans for 
-           any goal. <br> 
-           Wether you are looking to improve your strength, 
-           gain muscle size, 
-           lose fat or condition your body for a sport - we 
-           have a Fitness Formula for you! <br>
-           Here at Fitness Formula, we like to keep it simple. Workouts don't have to be grueling and long,
-           they can be fun and quick! <br> If there isn't a workout plan for you in our <a href="#workouts" class="p-link">workout library</a>, 
-           <a href="#contact" class="p-link">contact us</a> and we would love to form a workout specialised just for you.</p>
+           any goal - <br><br>
+           <ul>
+            <li>Gaining Strength</li>
+            <li>Gaining Muscle Size</li>
+            <li>Losing Fat</li>
+            <li>Sport Specialized Workouts</li>
+           </ul><br><br>
+           <a href="#workout-plan"><strong>+ a FREE starting workout plan personalised for you</strong></a>
         </article>
-        <!--<img src="https://i.ibb.co/yXsCzRR/edgar-chaparro-s-Hfo3-WOg-GTU-unsplash.jpg" alt="man doing pullup" class="homeimage-1">-->
       </div>
       </div>
 
@@ -98,7 +101,7 @@
             </div>
             <div class="card-column">
               <div class="card">
-                <img class="card-image" src="https://i.ibb.co/98C6NQJ/ian-schneider-Tam-Mbr4okv4-unsplash.jpg" alt="passion led here" alt="John" style="width:100%">
+                <img class="card-image" src="https://i.imgur.com/Vxm7IfZ.jpg" alt="passion led here" alt="John" style="width:100%">
                 <div class="card-text-container">
                   <div class="card-text">
                   <h2>Lose Fat</h2>
@@ -120,6 +123,97 @@
             </div>
           </div>
     </div>
+
+    <div id="workout-plan">
+      <aside class="plan-text">
+      <h1 class="plan-h1">Like what you see?</h1><br>
+      <p>Sign up to our newsletter here to receive specific excersises for your workout plan, such as -</p><br>
+      <ul>
+        <li>Specific Excersises</li>
+        <li>Cardio Tailored to You</li>
+        <li>Meal Plans</li>
+        <li>Scheduled Rest Days</li>
+      </ul>
+      </aside>
+      <div class="plan-image">
+        <img src="https://i.imgur.com/QpmYY6G.jpg">
+      </div>
+    </div>
+
+    <div id="about-us">
+      <div class="about-container">
+      <article class="about-aricle">
+        <h1>About us</h1><br>
+        <p>Fitness Formula was founded in 2022 by Lydia Flynn. 
+        <br>Lydia is a personal trainer from Brighton, England who found her passion for fitness when she was 20,
+        <br>after trying out a workout CD her father lent her, T25. Once Lydia started her workouts and saw progress,
+        <br>she quickly found a passion brewing for the fitness world.</p>
+      </article>
+    </div>
+    </div>
+
+    <div id="contact">
+    <form class="contact-form" action="index.html">
+      <fieldset>
+       <legend>Contact us:</legend><br><br>
+       <label for="fname">First name:</label>
+       <input type="text" id="fname" name="fname" placeholder="First name"><br><br>
+       <label for="lname">Last name:</label>
+       <input type="text" id="lname" name="lname" placeholder="Last name"><br><br>
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email" placeholder="Email address"><br><br>
+       <label for="message">Message:</label>
+       <textarea id="message" name="message" rows="5" cols="50" placeholder="Write your message here"></textarea>
+       <br><br>
+       <input class="contact-submit" type="submit" value="Send">
+      </fieldset>
+      </form>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-row">
+          <div class="footer-box quote">
+          <h2>FITNESS FORMULA</h2>
+          <p>"You're only one workout away from a good mood"<br>- Lydia Flynn</p>
+          </div>
+          <div class="footer-box footer-box2">
+              <table>
+                <th>Opening hours</th>
+                <br>
+                <tr><td>Mon - Fri</td><td>09:00 - 17:00</td></tr>
+                <br>
+                <tr><td>Sat - Sun</td><td>10:00 - 14:00</td></tr>
+              </table>
+              </form>
+          </div>
+          <div class="footer-box footer-box2">
+              <h2>Contact Us</h2>
+              <p><i class="fas fa-home"></i> 27 Buckingham Road, Shoreham, England</p>
+              <p><i class="fas fa-phone"></i> +44 1273 456789</p>
+              <p><i class="fas fa-envelope"></i> team@fitnessformula.com</p>
+          </div>
+          <div class="footer-box footer-box2">
+              <h2>Social Media</h2>
+              <p><a href="https://www.facebook.com" rel="noopener" target="_blank" aria-label="Go to the facebook company page"><i class="fa-brands fa-facebook"></i> Facebook</a>
+              </p>
+              <p><a href="https://twitter.com/" rel="noopener" target="_blank" aria-label="Go to the Twitter company page"><i class="fa-brands fa-twitter"></i> Twitter</a>
+              </p>
+              <p><a href="https://twitter.com/" rel="noopener" target="_blank" aria-label="Go to the Twitter company page"><i class="fa-brands fa-instagram"></i> Instagram</a>
+              </p>
+          </div>
+          <div class="footer-box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.932079717942!2d-0.27394768425472266!3d50.83242197952989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48759a032bc2307b%3A0x9ac44c2a960959c8!2sBuckingham%20Rd%2C%20Shoreham-by-Sea%20BN43%205UA!5e0!3m2!1sen!2suk!4v1654800096131!5m2!1sen!2suk" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          </div>
+          <hr>
+          <div class="copyright">
+            <p><i class="fas fa-copyright"></i> Copyright | <span><strong>Fitness Formula</strong></span> | 2022</p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 </body>
 
