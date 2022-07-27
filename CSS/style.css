@@ -196,9 +196,9 @@ li, a, button {
 }
 }*/
 
-/*.logo {
+.logo {
   color:whitesmoke;
-}*/
+}
 
 .logo > h1 {
   text-decoration-line:overline;
@@ -402,7 +402,7 @@ max-width: 100%;
 
 /* Adding emojis to my bullet points */
 .card-lists ul li:before { 
-  content: '💪';
+  content: "\f44b"
   margin-left: -20px; 
   margin-right: 10px;
 }
