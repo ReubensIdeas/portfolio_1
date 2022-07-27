@@ -10,46 +10,157 @@
 }
 
 html, body {
-    height: 100%;
-    max-width: 100vw;
-  }
+  height: 100%;
+  max-width: 100vw;
+}
   
+body {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/br8ALCZ.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1, p {
+  font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
+}
+
 
 li, a, button {
     font-weight: 400;
     font-size: 20px;
     text-decoration: none;
-    color: white;
-  }
-  
-header {
-  position: fixed;
-  top:0;
-  left:0;
-  z-index: 2;
-  display: inline-block;
-  width:100%;
-  padding: 10px 2.5%;
-  background-color: #FCACBF;
-  }
-  
-  @media screen and (max-width: 650px) {
-    header {
-      max-width:100%
-    }
+    color: whitesmoke;
   }
 
-@media screen and (max-width: 650px) {
-  .navbar {
-    max-width:100%
+@media screen and (max-width:800px) {
+  .nav-container{
+    z-index:2;
+    position: fixed;
+    /*overflow: hidden;*/
+    width: 100%;
+    background-color: #FCACBF;
+    
+}
+.menu-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FCACBF;
+    color: whitesmoke;
+    padding: 0 10px;
+}
+.menu-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all var(--transition) ease-in-out;
+}
+.menu-hamburger{
+    width: 20px;
+    height: 2px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    z-index: 10;
+    transition: all var(--transition) ease;
+}
+
+.menu-hamburger::before,
+.menu-hamburger::after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: whitesmoke;
+    border-radius: 5px;
+    transition: all var(--transition) ease;
+}
+.menu-hamburger::before{
+    transform: translateY(-6px);
+}
+.menu-hamburger::after{
+  transform: translateY(6px);
+}
+.menu-items{
+    z-index:2;
+    display: block;
+    background-color: #FCACBF;
+    color: whitesmoke;
+    position: absolute;
+    left: 100%;
+    height: 100%;
+    width: 80%;
+    padding-top: 70px;
+    top: 0;
+    transition: all var(--transition) ease-in-out;
+}
+.menu-items li{
+  background-color:#FCACBF;
+  z-index:2;
+  padding: 10px 15%;
+  text-align: center;
+  transition: all var(--transition) ease; 
+  list-style-type: none;
+}
+.menu-items li:hover{
+    letter-spacing: 2px;
+    opacity: .6;
+}
+
+/* animation */
+.menu-btn input:checked ~.menu-hamburger{
+    transform: translateX(-50px);
+    background: transparent;
+}
+.menu-btn input:checked ~.menu-hamburger::before{
+    transform: rotate(45deg) translate(35px, -35px);
+}
+.menu-btn input:checked ~.menu-hamburger::after{
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+.menu-btn input:checked ~.menu-items{
+    left: 20%;
+}
+.menu-btn input{
+    display: none;
+}
+.logo > h1 {
+  z-index: 3000;
+}
+}
+
+@media screen and (min-width:801px){
+  #menu-check {
+    display:none;
   }
+}
+
+@media screen and (min-width:801px){
+.nav-container {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:2;
+  display: inline-block;
+  width:100%;
+  padding: 15px 2.5%;
+  background-color: #FCACBF;
+}
+}
+
+a .logo h1 {
+  width:200px;
 }
 
 .logo {
     margin-right: auto;
   }
 
-.logo-h1 {
+.logo > h1 {
   text-decoration-line:overline;
   z-index:3;
 }
@@ -57,38 +168,49 @@ header {
 .logo:hover {
   color: rgba(205, 58, 255, 1);
   }
-  
-.nav-links {
+
+@media screen and (min-width:801px){
+.menu-items {
   position:absolute;
   list-style: none;
   padding: 0px 35px;
-  right: 10%;
+  right: 5%;
   top: 17px;
-
   }
   
-.nav-links li {
+
+.menu-items li {
   display: inline-block;
   padding: 0px 25px;
   }
   
-.nav-links li a {
+.menu-items li a {
     font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
     transition: all 0.2s ease 0s;
     font-size: 1.2em;
   }
   
-.nav-links li a:hover {
+.menu-items li a:hover {
     color: rgba(205, 58, 255, 1);
   }
 
 .cta {
-    position: absolute;
-    top: 15px;
-    right:2%;
+  background-color: rgba(205, 58, 255, 1);
+  padding: 9px 25px;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.2s ease 0s;
+  margin-left:20px;
+}
+
+.cta:hover {
+  background-color: rgba(205, 58, 255, 0.7);
+  cursor: pointer;
+  color: whitesmoke !important;
+}
 }
   
-button { 
+.learn-more { 
     font-family: sans-serif, 'Mingzat', 'Edu SA Beginner';
     padding: 9px 25px;
     background-color: rgba(205, 58, 255, 1);
@@ -98,13 +220,18 @@ button {
     margin-left: 20px;
   }
   
-button:hover {
+.learn-more:hover {
     background-color: rgba(205, 58, 255, 0.7);
     cursor: pointer;
   }
 
+.learn-more {
+  margin-left:auto;
+  margin-right:auto;
+}
+
   .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/phJkBN5.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://i.imgur.com/phJkBN5.jpg") !important;
     height: 70%;
     background-position: center;
     background-repeat: no-repeat;
@@ -120,20 +247,12 @@ button:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: whitesmoke;
+    font-size: 40px;
   }
 
-
-h1, p {
-  font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
-}
-
 .hometext-container {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("https://i.imgur.com/Je3Nsbs.jpg");
   height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: relative;
   max-width: 100%;
   max-height: 100%;
@@ -154,12 +273,11 @@ h1, p {
 .home-article {
   position:absolute;
   color: #3A3B3C;
-  background-color: #CBC3E3;
+  background-color: #FCACBF;
   font-family: 'Edu SA Beginner', 'Mingzat', sans-serif;
   width: 60%;
   top:20%;
   left:20%;
-  border-radius: 25px; 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   padding: 10vh 2.5vw;
   text-align: center;
@@ -183,7 +301,7 @@ article h1 p {
 }
 
 article a strong {
-  font-size: x-large;
+  font-size: larger;
   text-decoration: underline;
   color: #3A3B3C;
 }
@@ -193,21 +311,21 @@ article a strong {
 }
 
 article h1 {
-  font-size: xx-large;
+  font-size: 48px;
   text-decoration: overline;
 }
 
 article p {
-  font-size: larger;
+  font-size: 24px;
 }
 
 .workout-container {
 position: relative;
-background-color:#FCACBF;
+background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/vHNvPoy.jpg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 max-width: 100%;
-border: thick dotted #FCACBF;
-border-top: hidden;
-border-bottom: hidden;
 }
 
 .card-text {
@@ -215,8 +333,8 @@ border-bottom: hidden;
   padding-bottom: 16px;
 }
 
-.card-text > h1 {
-  color:#3A3B3C;
+.card-text > h2 {
+  color:whitesmoke;
 }
 
 .card-lists ul li {
@@ -224,6 +342,7 @@ border-bottom: hidden;
   font-size:x-large;
   list-style-type: none;
   color: #3A3B3C;
+  font-weight: 600;
 }
 
 /* Adding emojis to my bullet points */
@@ -236,6 +355,7 @@ border-bottom: hidden;
 /* Scrollable collumns for mobile */
 @media screen and (max-width: 800px) {
   .card-column {
+    background-color: #FCACBF;
     width: 100%;
     display: block;
     margin-bottom: 20px;
@@ -246,7 +366,7 @@ border-bottom: hidden;
 /* Three columns side by side */
 @media only screen and (min-width: 801px) {
 .card-column {
-  background-color: #CBC3E3;
+  background-color: #FCACBF;
   position: relative;
   display: inline-block;
   left: 3%;
@@ -261,13 +381,6 @@ border-bottom: hidden;
 .card-image {
   padding-bottom: 8px;
 }
-
-/* Display the columns below each other instead of side by side on small screens */
-/*@media screen and (max-width: 650px) {
-  .card-column {
-    max-width: 100%;
-    display: block;
-  } */
 
 /* Add some shadows to create a card effect */
 .card {
@@ -291,10 +404,6 @@ border-bottom: hidden;
 @media screen and (min-width:801px) {
   #workout-plan {
   position: relative;
-  background-image:url("https://i.imgur.com/vHNvPoy.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   max-width: 100%;
   height: 1100px;
   border-top: medium solid whitesmoke;
@@ -304,26 +413,37 @@ border-bottom: hidden;
 @media screen and (max-width:800px) {
   #workout-plan {
     position: relative;
-    background-image:url("https://i.imgur.com/vHNvPoy.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     max-width: 100%;
-    height: 1100px;
-    border-top: medium solid whitesmoke;
+    height: 1250px;
+    border-top: thick solid whitesmoke;
   }
 }
 
 @media screen and (min-width:800px){
 .plan-text {
   position: absolute;
-  background-color: #CBC3E3;
+  background-color: #FCACBF;
   text-align: center;
-  top: 30%;
+  top: 25%;
   right:15%;
   width:30%;
   box-shadow: 0 4px 8px 4px rgba(0, 0, 0, 0.2);
 }
+}
+
+.plan-text input {
+  width: 200px;
+}
+
+.newsletter {
+  padding: 9px 25px;
+  background-color: rgba(205, 58, 255, 1);
+  border: none;
+  border-radius: 50px;
+  transition: all 0.2s ease 0s;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: 100px;
 }
 
 .plan-text ul li {
@@ -370,7 +490,7 @@ border-bottom: hidden;
 
 @media screen and (max-width:800px) {
   .plan-text {
-   background-color: #CBC3E3;
+   background-color: #FCACBF;
    text-align:center;
    margin-top:5%;
    width: 80%;
@@ -383,7 +503,7 @@ border-bottom: hidden;
 }
 
 .about-container {
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/1Gykf72.jpg");
+background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://i.imgur.com/vHNvPoy.jpg");
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -393,25 +513,33 @@ max-width: 100%;
 border-top: thick solid whitesmoke;
 }
 
+@media screen and (min-width:801px){
 .about-container > article {
   position:absolute;
   color: #3A3B3C;
-  background-color:#CBC3E3;
-  border-radius: 25px; 
+  background-color:#FCACBF;
   width: 60%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
   padding: 10vh 2.5vw;
-  top:20%;
+  top:30%;
   left:20%;
   text-align: center;
   max-width: 100%;
   min-height: 40%;
 }
+}
 
 @media screen and (max-width:800px){
   .about-container > article {
-   width:80%;
-   left:10%;
+  position:absolute;
+  color: #3A3B3C;
+  background-color:#FCACBF;
+  width: 80%;
+  left:10%;
+  top:15%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+  padding: 10vh 2.5vw;
+  text-align: center;
   }
 }
 
@@ -421,10 +549,6 @@ article > h1 {
 
 .contact-form {
 position: relative;
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("https://i.imgur.com/br8ALCZ.jpg");
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
 height: 900px;
 max-width: 100%;
 border-top: medium solid whitesmoke;
@@ -434,9 +558,8 @@ border-top: medium solid whitesmoke;
 @media screen and (min-width:801px){
 fieldset {
   position: absolute;
-  background-color:#CBC3E3;
+  background-color:#FCACBF;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
-  border-radius: 25px;
   width: 40%;
   left: 30%;
   top: 25%;
@@ -447,9 +570,8 @@ fieldset {
 @media screen and (max-width:800px){
   fieldset {
     position:absolute;
-    background-color: #CBC3E3;
+    background-color: #FCACBF;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
-    border-radius: 25px;
     width:90%;
     left:5%;
     top:30%;
@@ -457,8 +579,13 @@ fieldset {
 }
 
 legend {
-  font-size: 1.6em;
-  color: darkslategrey;
+  font-size:xx-large;
+  color: whitesmoke;
+}
+
+label {
+  font-size:larger;
+  color: #3A3B3C;
 }
 
 .contact-submit {
@@ -467,7 +594,6 @@ legend {
   left: 42%;
   background-color: rgba(205, 58, 255, 1);
   border: none;
-  border-radius: 50px;
   transition: all 0.2s ease 0s;
   font-size: 1.2em;
 }
@@ -485,6 +611,12 @@ footer {
 
 .footer-row {
   display:list-item;
+  text-align:center;
+}
+
+.open-hours {
+  margin-left:auto;
+  margin-right:auto;
 }
 
 @media screen and (min-width:801px) {
@@ -537,7 +669,7 @@ max-width:20%;
 }
 
 .footer-box2 p a i {
-  color: whitesmoke;
+  color: #3A3B3C;
 }
 
 table th i {

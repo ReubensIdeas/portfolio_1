@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
   <meta charset="utf-8">
@@ -13,24 +13,33 @@
 
 <body>
     <header>
-      <div class="navbar">
-        <a class="logo" href="index.html"><h1 class="logo-h1">FITNESS FORMULA</h1></a>
-         <nav>
-           <ul class="nav-links">
-             <li><a href="#home">Home</a></li>
-             <li><a href="#workouts">Workout plans</a></li>
-             <li><a href="#about-us">About us</a></li>
-           </ul>
-         </nav>
-         <a class="cta" href="#contact"><button>Contact</button></a>
-      </div>
+      <div class="nav-container">
+        <!-- The nav bar with logo and menu items-->
+        <nav class="menu-container">
+          <a href="#home" class="logo"><h1>FITNESS FORMULA</h1></a>
+          <label for="menu-check" class="menu-btn">
+      
+            <!-- checkbox to track when the hamburger menu is clicked on through mobile -->
+            <input type="checkbox" id="menu-check" />
+      
+            <!-- the hamburger mobile menu -->
+            <div class="menu-hamburger"></div>
+      
+            <!-- menu items -->
+            <ul class="menu-items">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#workouts">Workout plans</a></li>
+              <li><a href="#about-us">About us</a></li>
+              <li><a class="cta" href="#contact">Contact</a></li>
+            </ul>
+          </label>
+        </nav>
     </header>
 
     <div class="hero-image">
       <div class="hero-text">
-        <h1>What do we offer?</h1>
-        <br>
-        <a href="#home"><button class="learn-more">Learn more</button></a>
+        <h1>FREE WORKOUT PLAN</h1>
+        <a href="#workout-plan" class="learn-more">Learn more</a>
       </div>
     </div>
 
@@ -61,7 +70,7 @@
                 <div class="card-text">
                   <h2>Strength Training</h2>
                   <br>
-                  <p>Strength training involves the performance of physical exercises that are designed to improve strength over time.</p>
+                  <p>Strength training increases your strength over time through lifting heavy for fewer repitiions and mor rest.</p>
                   <br>
                   <p>What our strength plans will look like:</p>
                   <br>
@@ -79,12 +88,12 @@
           
             <div class="card-column">
               <div class="card">
-                <img class="card-image" src="https://i.ibb.co/crnPZh7/alora-griffiths-Tuzrz-Arccvc-unsplash.jpg" alt="man doing a squat" alt="Mike" style="width:100%">
+                <img class="card-image" src="https://i.ibb.co/crnPZh7/alora-griffiths-Tuzrz-Arccvc-unsplash.jpg" alt="man doing a squat" style="width:100%">
                 <div class="card-text-container">
                   <div class="card-text">
                   <h2>Build Muscle Size</h2>
                   <br>
-                  <p>is an increase and growth of muscle cells. Hypertrophy refers to an increase in muscular size achieved through exercise.</p>
+                  <p>Putting your muscles under tension for a longer period of time increases your muscle size - this is called hypertrophy.</p>
                   <br>
                   <p>What our muscle size plans look like:</p>
                   <br>
@@ -101,18 +110,18 @@
             </div>
             <div class="card-column">
               <div class="card">
-                <img class="card-image" src="https://i.imgur.com/Vxm7IfZ.jpg" alt="passion led here" alt="John" style="width:100%">
+                <img class="card-image" src="https://i.imgur.com/Vxm7IfZ.jpg" alt="passion led here" style="width:100%">
                 <div class="card-text-container">
                   <div class="card-text">
                   <h2>Lose Fat</h2>
                   <br>
-                  <p>Fat loss refers to weight loss from fat through eating at a caloric defecit and if needed, cardio.</p>
+                  <p>Fat lose is achieved through maintaining a caloric deficit and/or cardiovascular exercises.</p>
                   <br>
                   <p>What our fat loss plans look like:</p>
                   <br>
                   <div class="card-lists">
                     <ul>
-                      <li>0 - 60 minutes of cardio</li>
+                      <li>0 - 30 minutes of cardio</li>
                       <li>Hypertrophy lifting</li>
                       <li>Eating at a caloric defecit</li>
                     </ul>
@@ -127,7 +136,7 @@
     <div id="workout-plan">
       <div class="plan-column">
       <div class="plan-image">
-        <img src="https://i.imgur.com/QpmYY6G.jpg">
+        <img src="https://i.imgur.com/QpmYY6G.jpg" alt="one month workout plan">
       </div>
       <aside class="plan-text">
       <h1 class="plan-h1">Like what you see?</h1><br>
@@ -138,6 +147,14 @@
         <li>Meal Plans</li>
         <li>Scheduled Rest Days</li>
       </ul>
+      <br>
+      <form action="index.html" method="get">
+        <label for="name">Enter your name:</label><br>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+        <label for="email">Enter your email:</label><br>
+        <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+        <input class="newsletter" type="submit" value="Join">
+      </form>
       </aside>
     </div>
     </div>
@@ -155,15 +172,15 @@
     </div>
 
     <div id="contact">
-    <form class="contact-form" action="index.html">
+    <form class="contact-form" action="index.html" method="post">
       <fieldset>
-       <legend>Contact us:</legend><br><br>
+       <legend><strong>Contact us:</strong></legend><br><br>
        <label for="fname">First name:</label>
        <input type="text" id="fname" name="fname" placeholder="First name"><br><br>
        <label for="lname">Last name:</label>
        <input type="text" id="lname" name="lname" placeholder="Last name"><br><br>
        <label for="email">Email:</label>
-       <input type="email" id="email" name="email" placeholder="Email address"><br><br>
+       <input type="email" id="contactemail" name="email" placeholder="Email address"><br><br>
        <label for="message">Message:</label>
        <textarea id="message" name="message" rows="5" cols="50" placeholder="Write your message here"></textarea>
        <br><br>
@@ -179,43 +196,39 @@
           <h2>FITNESS FORMULA</h2>
           <p>"You're only one workout away from a good mood"<br>- Lydia Flynn</p>
           </div>
-          <div class="footer-box footer-box2 open-hours">
-              <table>
-                <th>Opening hours</th>
-                <br>
-                <tr><td>Mon - Fri</td><td>09:00 - 17:00</td></tr>
-                <br>
-                <tr><td>Sat - Sun</td><td>10:00 - 14:00</td></tr>
-              </table>
-              </form>
-          </div>
           <div class="footer-box footer-box2">
-              <h2>Contact Us</h2>
-              <p><i class="fas fa-home"></i> 27 Buckingham Road, Shoreham, England</p>
-              <p><i class="fas fa-phone"></i> +44 1273 456789</p>
-              <p><i class="fas fa-envelope"></i> team@fitnessformula.com</p>
-          </div>
-          <div class="footer-box footer-box2">
-              <h2>Social Media</h2>
-              <p><a href="https://www.facebook.com" rel="noopener" target="_blank" aria-label="Go to the facebook company page"><i class="fa-brands fa-facebook"></i> Facebook</a>
-              </p>
-              <p><a href="https://twitter.com/" rel="noopener" target="_blank" aria-label="Go to the Twitter company page"><i class="fa-brands fa-twitter"></i> Twitter</a>
-              </p>
-              <p><a href="https://twitter.com/" rel="noopener" target="_blank" aria-label="Go to the Twitter company page"><i class="fa-brands fa-instagram"></i> Instagram</a>
-              </p>
-          </div>
-          <div class="footer-box">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.932079717942!2d-0.27394768425472266!3d50.83242197952989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48759a032bc2307b%3A0x9ac44c2a960959c8!2sBuckingham%20Rd%2C%20Shoreham-by-Sea%20BN43%205UA!5e0!3m2!1sen!2suk!4v1654800096131!5m2!1sen!2suk" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-          </div>
-          </div>
+            <table class="open-hours">
+              <tr><th>Opening hours</th></tr>
+              <tr><td>Mon - Fri</td><td>09:00 - 17:00</td></tr>
+              <tr><td>Sat - Sun</td><td>10:00 - 14:00</td></tr>
+            </table>
+        </div>
+        <div class="footer-box footer-box2">
+            <h2>Contact Us</h2>
+            <p><i class="fas fa-home"></i> 27 Buckingham Road, Shoreham, England</p>
+            <p><i class="fas fa-phone"></i> +44 1273 456789</p>
+            <p><i class="fas fa-envelope"></i> team@fitnessformula.com</p>
+        </div>
+        <div class="footer-box footer-box2">
+            <h2>Social Media</h2>
+            <p><a href="https://www.facebook.com" rel="noopener" target="_blank" aria-label="Go to the facebook company page"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </p>
+            <p><a href="https://twitter.com/" rel="noopener" target="_blank" aria-label="Go to the Twitter company page"><i class="fa-brands fa-twitter"></i> Twitter</a>
+            </p>
+            <p><a href="https://twitter.com/" rel="noopener" target="_blank" aria-label="Go to the Twitter company page"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            </p>
+        </div>
+        <div class="footer-box map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.932079717942!2d-0.27394768425472266!3d50.83242197952989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48759a032bc2307b%3A0x9ac44c2a960959c8!2sBuckingham%20Rd%2C%20Shoreham-by-Sea%20BN43%205UA!5e0!3m2!1sen!2suk!4v1654800096131!5m2!1sen!2suk" width="350" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        </div>
           <hr>
-          <div class="copyright">
-            <p><i class="fas fa-copyright"></i> Copyright | <span><strong>Fitness Formula</strong></span> | 2022</p>
-          </div>
+        <div class="copyright">
+          <p><i class="fas fa-copyright"></i> Copyright | <span><strong>Fitness Formula</strong></span> | 2022</p>
         </div>
       </div>
-    </footer>
+  </footer>
 
 </body>
 
