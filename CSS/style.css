@@ -44,7 +44,6 @@ li, a, button {
   .navbar {
     width: 100%;
     background-color:#FCACBF;
-    /*box-shadow: 0 1px 4px rgb(146 161 176 / 15%);*/
     position: relative;
     z-index: 2;
   }
@@ -197,14 +196,14 @@ li, a, button {
 }
 }*/
 
-.logo {
-  margin-right: auto;
-}
+/*.logo {
+  color:whitesmoke;
+}*/
 
 .logo > h1 {
   text-decoration-line:overline;
   z-index:3;
-  color: whitesmoke;
+  color:whitesmoke;
 }
 
 @media screen and (min-width:951px){
